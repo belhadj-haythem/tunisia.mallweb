@@ -1,0 +1,287 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:c="http://java.sun.com/jsp/jstl/core">
+	<h:head>
+		<title>Amberegul A Ecommerce Category Flat Bootstrap
+			Responsive Website Template | Home :: w3layouts</title>
+		<h:outputStylesheet library="css" name="bootstrap.css"></h:outputStylesheet>
+		<!-- <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" /> -->
+		<h:outputScript library="js" name="jquery.min.js"></h:outputScript>
+		<!-- <script src="js/jquery.min.js"></script> -->
+		<h:outputStylesheet library="css" name="style.css"></h:outputStylesheet>
+		<!-- <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />	 -->
+
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords"
+			content="Amberegul Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+		<link
+			href='http://fonts.googleapis.com/css?family=Roboto+Slab:300,700,400'
+			rel='stylesheet' type='text/css' />
+		<link
+			href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900'
+			rel='stylesheet' type='text/css' />
+		<!--//fonts-->
+		<!-- start menu -->
+
+		<h:outputStylesheet library="css" name="megamenu.css"></h:outputStylesheet>
+		<!-- <link href="css/megamenu.css" rel="stylesheet" type="text/css" media="all" /> -->
+		<h:outputScript library="js" name="megamenu.js"></h:outputScript>
+		<!-- <script type="text/javascript" src="js/megamenu.js"></script> -->
+		<script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
+		<!--//slider-script-->
+
+		<h:outputScript library="js" name="easyResponsiveTabs.js"></h:outputScript>
+		<!-- <script src="js/easyResponsiveTabs.js" type="text/javascript"></script> -->
+		<script type="text/javascript">
+			    $(document).ready(function () {
+			        $('#horizontalTab').easyResponsiveTabs({
+			            type: 'default', //Types: default, vertical, accordion           
+			            width: 'auto', //auto or any width like 600px
+			            fit: true   // 100% fit in a container
+			        });
+			    });
+				
+</script>
+
+		<h:outputScript library="js" name="simpleCart.min.js"></h:outputScript>
+		<!-- <script src="js/simpleCart.min.js"> </script> -->
+
+	</h:head>
+
+	<div class="header-top">
+		<div class="container">
+			<div class="header-top-in">
+
+				<ul class="support">
+					<li><a href="mailto:info@example.com"><i> </i>admtunisiamall@gmail.com</a></li>
+					<li><span><i class="tele-in"> </i>71 557 253</span></li>
+				</ul>
+				<ul class=" support-right">
+					<li><a href="login.jsf"><i class="men"> </i>Login</a></li>
+					<li><a href="register.jsf"><i class="tele"> </i>Create an
+							Account</a></li>
+				</ul>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+		<div class="header-bottom">
+			<div class="container">
+				<div class="logo">
+					<h1>
+						<a href="template.jsf"> <h:graphicImage library="images"
+								name="logo3.jpg" /> Tunisia Mall
+						</a>
+					</h1>
+				</div>
+				<div class="top-nav">
+					<!-- start header menu -->
+					<ul class="megamenu skyblue">
+						<li><a href="template.jsf">Home</a></li>
+
+						<li class="active grid"><a href="listshop.jsf">Shops</a>
+							<div class="megapanel">
+								<div class="row">
+									<div class="col1">
+										<div class="h_nav">
+
+											<h4>Beauté et bien être</h4>
+											<ul>
+												<ui:repeat value="#{shopBean.shops}" var="s">
+													<li><h:form>
+															<h:commandLink action="#{imageBean.redirect()}"
+																value="#{s.nameShop}">
+																<f:param name="id" value="#{s.id_account}" />
+																<f:param name="nameShop" value="#{s.nameShop}" />
+																<f:param name="phone" value="#{s.phone}" />
+																<f:param name="website" value="#{s.website}" />
+																<f:param name="description" value="#{s.description}" />
+															</h:commandLink>
+															
+															
+														</h:form></li>
+												</ui:repeat>
+											</ul>
+										</div>
+									</div>
+									<div class="col1">
+										<div class="h_nav">
+											<h4>Accessoires et modes</h4>
+											<ul>
+												<ui:repeat value="#{shopBean.shops2}" var="s">
+													<li><h:form>
+															<h:commandLink action="#{imageBean.redirect()}"
+																value="#{s.nameShop}">
+																<f:param name="id" value="#{s.id_account}" />
+																<f:param name="nameShop" value="#{s.nameShop}" />
+																<f:param name="phone" value="#{s.phone}" />
+																<f:param name="website" value="#{s.website}" />
+																<f:param name="description" value="#{s.description}" />
+															</h:commandLink>
+															
+															
+														</h:form></li>
+												</ui:repeat>
+											</ul>
+										</div>
+									</div>
+									<div class="col1">
+										<div class="h_nav">
+											<h4>Maison</h4>
+											<ul>
+												<ui:repeat value="#{shopBean.shops3}" var="s">
+													<li><h:form>
+															<h:commandLink action="#{imageBean.redirect()}"
+																value="#{s.nameShop}">
+																<f:param name="id" value="#{s.id_account}" />
+																<f:param name="nameShop" value="#{s.nameShop}" />
+																<f:param name="phone" value="#{s.phone}" />
+																<f:param name="website" value="#{s.website}" />
+																<f:param name="description" value="#{s.description}" />
+															</h:commandLink>
+															
+															
+														</h:form></li>
+												</ui:repeat>
+											</ul>
+										</div>
+									</div>
+									<div class="col1">
+										<div class="h_nav">
+											<h4>Art et culture</h4>
+											<ul>
+												<ui:repeat value="#{shopBean.shops4}" var="s">
+													<li><h:form>
+															<h:commandLink action="#{imageBean.redirect()}"
+																value="#{s.nameShop}">
+																<f:param name="id" value="#{s.id_account}" />
+																<f:param name="nameShop" value="#{s.nameShop}" />
+																<f:param name="phone" value="#{s.phone}" />
+																<f:param name="website" value="#{s.website}" />
+																<f:param name="description" value="#{s.description}" />
+															</h:commandLink>
+															
+															
+														</h:form></li>
+												</ui:repeat>
+											</ul>
+										</div>
+									</div>
+									<div class="col1">
+										<div class="h_nav">
+											<h4>Services et technologies</h4>
+											<ul>
+												<ui:repeat value="#{shopBean.shops5}" var="s">
+													<li><h:form>
+															<h:commandLink action="#{imageBean.redirect()}"
+																value="#{s.nameShop}">
+																<f:param name="id" value="#{s.id_account}" />
+																<f:param name="nameShop" value="#{s.nameShop}" />
+																<f:param name="phone" value="#{s.phone}" />
+																<f:param name="website" value="#{s.website}" />
+																<f:param name="description" value="#{s.description}" />
+															</h:commandLink>
+															
+															
+														</h:form></li>
+												</ui:repeat>
+											</ul>
+										</div>
+									</div>
+									<div class="col1">
+										<div class="h_nav">
+											<h4>Restauration</h4>
+											<ul>
+												<ui:repeat value="#{shopBean.shops6}" var="s">
+													<li><h:form>
+															<h:commandLink action="#{imageBean.redirect()}"
+																value="#{s.nameShop}">
+																<f:param name="id" value="#{s.id_account}" />
+																<f:param name="nameShop" value="#{s.nameShop}" />
+																<f:param name="phone" value="#{s.phone}" />
+																<f:param name="website" value="#{s.website}" />
+																<f:param name="description" value="#{s.description}" />
+															</h:commandLink>
+															
+															
+														</h:form></li>
+												</ui:repeat>
+											</ul>
+										</div>
+									</div>
+									<!-- 											<div class="col1 col5"> -->
+									<!-- 												<iframe -->
+									<!-- 													src="https://player.vimeo.com/video/10777111?color=ffffff&amp;title=0&amp;byline=0&amp;portrait=0" -->
+									<!-- 													webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe> -->
+									<!-- 											</div> -->
+
+								</div>
+
+							</div></li>
+						<li><a href="NewsList.jsf">Latest News</a></li>
+
+						<li><a href="statistics.jsf">Statisics</a></li>
+						<li><a href="visitmall.jsf">Mall map</a></li>
+						<li><a href="magazine.jsf">Magazine</a></li>
+						<li><a href="catalogueOnline.jsf">Catalogue</a></li>
+					</ul>
+					<!---->
+					<div class="search-in" style="color: white">
+						<div class="search">
+							<form>
+								<input type="text" value="Keywords" onfocus="this.value = '';"
+									onblur="if (this.value == '') {this.value = 'Keywords';}"
+									class="text" /> <input type="submit" value="SEARCH" />
+							</form>
+							<div class="close-in">
+								<h:graphicImage library="images" name="close.png" />
+							</div>
+						</div>
+						<div class="right">
+							<button></button>
+						</div>
+					</div>
+					<script type="text/javascript">
+							$('.search').hide();
+							$('button').click(function (){
+							$('.search').show();
+							$('.text').focus();
+							}
+							);
+							$('.close-in').click(function(){
+							$('.search').hide();
+							});
+						</script>
+
+					<!---->
+					<div class="cart box_1" style="color: white">
+						<a href="checkoutt.jsf">
+							<h3>
+								<div class="total" style="color: white">
+								
+								</div>
+								
+							</h3>
+						</a>
+						<p>
+							<a href="javascript:;" class="simpleCart_empty"
+								style="color: white"></a>
+						</p>
+						<div class="clearfix"></div>
+					</div>
+
+					<div class="clearfix"></div	>
+					<!---->
+				</div>
+
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+
+</ui:composition>

@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title>yostaa</title>
+	<h:outputStylesheet library="css" name="bootstrap.css"></h:outputStylesheet>
+	<h:outputScript library="js" name="jquery.min.js"></h:outputScript>
+
+	<h:outputStylesheet library="css" name="style.css"></h:outputStylesheet>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords"
+		content="Amberegul Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+
+	<h:outputStylesheet library="css" name="megamenu.css"></h:outputStylesheet>
+
+	<h:outputScript library="js" name="megamenu.js"></h:outputScript>
+
+
+</h:head>
+<h:body>
+	<!--header-->
+	<ui:include src="/template/HeaderConnected.xhtml" />
+	<!---->
+
+
+	<div class="container">
+
+		<div class="blog-in">
+		<h:form>
+			<div class="col-md-8">
+				<h1>Events List</h1>
+				<br></br> <br></br>
+				
+				<ui:repeat value="#{eventBean.paginator.model}" var="ev">
+
+					<div class="blog-in-top">
+						<div class="col-md-6 van">
+							<p:graphicImage value="#{eventBean.myImage}" width="180"
+								height="200">
+								<f:param name="id" value="#{ev.id}" />
+							</p:graphicImage>
+						</div>
+
+						<div class="col-md-6 on-para">
+							<h:outputText value="Name shop: #{eventBean.doReturnNameShop(ev)}" style=" font-weight: bold;-webkit-tap-highlight-color: rgba(0, 0, 0, 0); font-size:20px" />
+							<br></br>
+							<h:outputText value="Event title: #{ev.title}" style=" font-weight: bold;-webkit-tap-highlight-color: rgba(0, 0, 0, 0); font-size:20px" />
+							<br></br>
+							<h:outputText value="place: #{ev.place}" style=" font-weight: bold; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); font-size:20px" />
+							<br></br>
+							<h:outputText value="Start date: #{ev.dateDebut}" style=" font-weight: bold; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); font-size:20px"/>
+							<br></br>
+							<h:outputText value="End date: #{ev.dateFin}" style=" font-weight: bold; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); font-size:20px"/>
+							<br></br> <br></br>
+							<h:commandButton class="btn btn-primary" action="EventSingle"
+								value="Read more">
+								<f:setPropertyActionListener value="#{ev}"
+									target="#{eventBean.event}"></f:setPropertyActionListener>
+							</h:commandButton>
+						</div>
+					</div>
+					<div class="clearfix"></div>
+					<br></br>
+				</ui:repeat>
+				<h:commandButton value="&lt; prev" action="#{eventBean.paginator.prev}" styleClass="ui-priority-primary"/>
+        <h:outputText value="#{eventBean.paginator.pageIndex} / #{eventBean.paginator.pages}" style=" font-weight: bold; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); font-size:15px"/>
+        <h:commandButton value="next &gt;" action="#{eventBean.paginator.next}" styleClass="ui-priority-primary"/>
+        <h:inputHidden value="#{eventBean.paginator.pageIndex}"/>
+			
+			</div>
+			</h:form>
+			
+			<br></br> <br></br>
+
+			<div class="col-md-4 amet">
+				<div class="grid-per">
+					<h:graphicImage library="images" name="bl1.jpg" />
+					<div class="six-per">
+						<h4>
+							<h:outputText
+								value="Last event: #{eventBean.dernierEvent().title}" />
+						</h4>
+						<br></br> <br></br>
+						<h4>
+							<h:outputText
+								value="Start date: #{eventBean.dernierEvent().dateDebut}" />
+							<br></br>
+							<h:outputText
+								value="End date: #{eventBean.dernierEvent().dateFin}" />
+						</h4>
+						<br></br>
+						<h4>
+							<h:outputText value="Place: #{eventBean.dernierEvent().place}" />
+						</h4>
+						<br></br> <br></br>
+						<p>
+							<h:outputText
+								value="Subject: #{eventBean.dernierEvent().subject}" />
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+
+	<!---->
+	<ui:include src="/template/footer.xhtml" />
+	<!---->
+</h:body>
+</html>

@@ -1,0 +1,104 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+
+
+<h:outputStylesheet library="css" name="bootstrap.css"></h:outputStylesheet>
+	<!-- <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" /> -->
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<h:outputScript library="js" name="jquery.min.js"></h:outputScript>
+	<!-- <script src="js/jquery.min.js"></script> -->
+	<!-- Custom Theme files -->
+	<!--theme-style-->
+
+	<h:outputStylesheet library="css" name="style.css"></h:outputStylesheet>
+	<!-- <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />	 -->
+	<!--//theme-style-->
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords"
+		content="Amberegul Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<!--fonts-->
+	<link
+		href='http://fonts.googleapis.com/css?family=Roboto+Slab:300,700,400'
+		rel='stylesheet' type='text/css' />
+	<link
+		href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900'
+		rel='stylesheet' type='text/css' />
+	<!--//fonts-->
+	<!-- start menu -->
+
+	<h:outputStylesheet library="css" name="megamenu.css"></h:outputStylesheet>
+	<!-- <link href="css/megamenu.css" rel="stylesheet" type="text/css" media="all" /> -->
+
+	<h:outputScript library="js" name="megamenu.js"></h:outputScript>
+	<!-- <script type="text/javascript" src="js/megamenu.js"></script> -->
+
+	<script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
+	
+
+</h:head>
+
+
+
+<h:body>
+	<ui:include src="/template/HeaderConnected.xhtml" />
+
+	<div class="container">
+		<h6 class="dress">
+			<a href="index.html">Home</a> <i> </i> News
+		</h6>
+	</div>
+
+	<div class="back">
+		<h2>News</h2>
+	</div>
+
+	<!--  	<p:dataTable value="#{newsBean.news}" var="news">   -->
+	<!-- 							<p:column>  -->
+	<!--  		 						<p:graphicImage value="#{newsBean.myImage}">   -->
+	<!-- 									<f:param name="id" value="#{news.id}" />   -->
+	<!--  		 						</p:graphicImage>   -->
+	<!-- 							</p:column>   -->
+	<!-- 						</p:dataTable>   -->
+
+	<h:form>
+		<p:dataScroller value="#{newsBean.news}" var="car" chunkSize="10">
+			<f:facet name="header">
+           News
+        </f:facet>
+
+			<h:panelGrid columns="2"
+				style="width:40%;margin-left: 80px; margin-top:20px;"
+				columnClasses="logo,detail">
+				<p:graphicImage value="#{newsBean.myImage}" width="200" height="200">
+					<f:param name="id" value="#{car.id}" />
+				</p:graphicImage>
+
+				<p:outputPanel>
+					<h:panelGrid columns="2" cellpadding="5">
+						<h:outputText value="Start Date : " />
+						<h:outputText value="#{car.dateDebut}" style="font-weight: bold" />
+
+						<h:outputText value="Title:  " />
+						<h:outputText value="#{car.title}" style="font-weight: bold" />
+
+						<h:outputText value="Subject:  " />
+						<h:outputText value="#{car.subject}" style="font-weight: bold" />
+					</h:panelGrid>
+				</p:outputPanel>
+			</h:panelGrid>
+		</p:dataScroller>
+	</h:form>
+	
+
+
+	<ui:include src="/template/footer.xhtml" />
+
+</h:body>
+</html>

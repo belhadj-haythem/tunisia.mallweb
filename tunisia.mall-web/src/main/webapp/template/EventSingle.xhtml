@@ -1,0 +1,223 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title>Event Single</title>
+	<h:outputStylesheet library="css" name="bootstrap.css"></h:outputStylesheet>
+	<h:outputScript library="js" name="jquery.min.js"></h:outputScript>
+
+	<h:outputStylesheet library="css" name="style.css"></h:outputStylesheet>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords"
+		content="Amberegul Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+
+	<h:outputStylesheet library="css" name="megamenu.css"></h:outputStylesheet>
+
+	<h:outputScript library="js" name="megamenu.js"></h:outputScript>
+
+	<h:outputScript library="js" name="countdown1.js"></h:outputScript>
+
+	<h:outputStylesheet library="css" name="countdown.css"></h:outputStylesheet>
+
+<style>
+
+#clockdiv{
+	font-family: sans-serif;
+	display: inline-block;
+	color: #fff;
+	font-weight: 50;
+	text-align: center;
+	font-size: 15px;
+}
+
+#clockdiv > div{
+	padding: 10px;
+	border-radius: 3px;
+	background: #DE4D60;
+	display: inline-block;
+}
+
+#clockdiv div > span{
+	padding: 10px;
+	border-radius: 3px;
+	background: #A93A49;
+	display: inline-block;
+}
+
+.smalltext{
+	padding-top: 5px;
+	font-size: 16px;
+}
+
+</style>
+
+</h:head>
+<body>
+	<!--header-->
+	<ui:include src="/template/HeaderConnected.xhtml" />
+	<!---->
+
+
+
+	<div class="container">
+
+		<h:form id="formId">
+
+			<div class="blog-in">
+				<div class="col-md-8">
+					<h1>
+						<h:outputText
+							value="Name shop: #{eventBean.doReturnNameShop(eventBean.event)}"
+							style="font-weight: bold; font-size:15px;font-family: Georgia" />
+					</h1>
+					<br></br> <br></br>
+
+					<div class="blog-in-top">
+						<div class="col-md-6 van">
+							<p:graphicImage value="#{eventBean.myImage}" width="250"
+								height="220">
+								<f:param name="id" value="#{eventBean.event.id}" />
+							</p:graphicImage>
+						</div>
+
+						<div class="col-md-6 on-para">
+
+							<h:commandButton class="btn btn-primary" action="Event"
+								value="BACK">
+							</h:commandButton>
+							<br></br> <br></br><br></br>
+				<div id="clockdiv">
+					<div>
+						<span class="days"></span>
+						<div class="smalltext">Days</div>
+					</div>
+					<div>
+						<span class="hours"></span>
+						<div class="smalltext">Hours</div>
+					</div>
+					<div>
+						<span class="minutes"></span>
+						<div class="smalltext">Minutes</div>
+					</div>
+					<div>
+						<span class="seconds"></span>
+						<div class="smalltext">Seconds</div>
+					</div>
+				</div>
+							<br></br><br></br> <br></br>
+							<h:commandButton
+								action="#{eventBean.doCreatePdf(eventBean.event)}"
+								value="download event" style="display:block;margin-bottom: 20px">
+							</h:commandButton>
+
+						</div>
+
+						<div class="col-md-8 on-para">
+
+							<br></br>
+							<h:outputText value="Tilte: "
+								style="font-weight: bold; font-size:15px;font-family: Georgia" />
+							<h:outputText value="#{eventBean.event.title}"
+								style="font-size:15px;font-family: Georgia" />
+							<br></br>
+							<h:outputText value="place: "
+								style="font-weight: bold; font-size:15px;font-family: Georgia" />
+							<h:outputText value="#{eventBean.event.place}"
+								style="font-size:15px;font-family: Georgia" />
+							<br></br>
+							<h:outputText value="Start date: "
+								style="font-weight: bold; font-size:15px;font-family: Georgia" />
+							<h:outputText value="#{eventBean.event.dateDebut}"
+								style="font-size:15px;font-family: Georgia" />
+							<br></br>
+							<h:outputText value="End date: "
+								style="font-weight: bold; font-size:15px;font-family: Georgia" />
+							<h:outputText value="#{eventBean.event.dateFin}"
+								style="font-size:15px;font-family: Georgia" />
+							<br></br> <br></br>
+							<center>
+								<h:outputText value="Subject: "
+									style="font-weight: bold; font-size:15px;font-family: Georgia" />
+								<h:outputText value="#{eventBean.event.subject}"
+									style="font-size:15px;font-family: Georgia" />
+							</center>
+							<br></br> <br></br> <br></br>
+
+
+
+
+
+						</div>
+
+					</div>
+
+					<div class="clearfix"></div>
+					<br></br>
+
+				</div>
+
+				<br></br> <br></br>
+
+				<div class="col-md-4 amet">
+					<div class="grid-per">
+						<h:graphicImage library="images" name="bl1.jpg" />
+						<div class="six-per">
+							<h4>
+								<h:outputText
+									value="Last event: #{eventBean.dernierEvent().title}" />
+							</h4>
+							<br></br> <br></br>
+							<h4>
+								<h:outputText
+									value="Start date: #{eventBean.dernierEvent().dateDebut}" />
+								<br></br>
+								<h:outputText
+									value="End date: #{eventBean.dernierEvent().dateFin}" />
+							</h4>
+							<br></br>
+							<h4>
+								<h:outputText value="Place: #{eventBean.dernierEvent().place}" />
+							</h4>
+							<br></br> <br></br>
+							<p>
+								<h:outputText
+									value="Subject: #{eventBean.dernierEvent().subject}" />
+							</p>
+						</div>
+					</div>
+				</div>
+
+
+				<h:inputText id="propertyId"
+					value="#{eventBean.compterParSeconde(eventBean.event.dateFin)}" style="display:none"/>
+
+				<script type="text/javascript">
+
+				var i=#{eventBean.compterParSeconde(eventBean.event.dateFin)};
+				$(document).ready(function() {
+					var deadline = new Date(Date.parse(new Date()) + i);
+					initializeClock('clockdiv', deadline);
+				});
+	</script>
+
+				<div class="clearfix"></div>
+			</div>
+		</h:form>
+
+	</div>
+
+
+	<!---->
+	<ui:include src="/template/footer.xhtml" />
+	<!---->
+
+
+
+</body>
+</html>

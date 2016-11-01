@@ -1,0 +1,248 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+</h:head>
+	<div class="header-top">
+		<div class="container">
+			<div class="header-top-in">
+
+				<ul class="support">
+					<li><a href="mailto:tunisiamalladm@gmail.com"><i> </i>tunisiamalladm@gmail.com</a></li>
+					<li><span><i class="tele-in"> </i>0 462 261 61 61</span></li>
+				</ul>
+				<ul class=" support-right">
+					<li><a href="test.jsf"><i class="men"> </i>Profile</a></li>
+					<li><h:form>
+							<p:commandLink actionListener="#{loginBean.doLogout()}" action="template.jsf">
+								<h:outputText value="Logout" />
+								<i class="tele"> </i>
+							</p:commandLink>
+						</h:form></li>
+
+				</ul>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+		<div class="header-bottom">
+			<div class="container">
+				<div class="logo">
+					<h1>
+						<a href="template.jsf"><h:graphicImage library="images"
+								name="logo3.jpg" />Tunisia Mall</a>
+					</h1>
+				</div>
+				<div class="top-nav">
+					<!-- start header menu -->
+					<ul class="megamenu skyblue">
+						<li><a href="template.jsf">Home</a></li>
+						
+						<li><a href="Event.jsf">Events</a></li>
+						<li><a href="Games.jsf">Games</a></li>
+						<li class="active grid"><a href="listshop.jsf">Shops</a>
+							<div class="megapanel">
+								<div class="row">
+									<div class="col1">
+										<div class="h_nav">
+
+											<h4>Beauté et bien être</h4>
+											<ul>
+												<ui:repeat value="#{shopBean.shops}" var="s">
+													<li><h:form>
+															<h:commandLink action="#{imageBean.redirect()}"
+																value="#{s.nameShop}">
+																<f:param name="id" value="#{s.id_account}" />
+																<f:param name="nameShop" value="#{s.nameShop}" />
+																<f:param name="phone" value="#{s.phone}" />
+																<f:param name="website" value="#{s.website}" />
+																<f:param name="description" value="#{s.description}" />
+															</h:commandLink>
+															
+															
+														</h:form></li>
+												</ui:repeat>
+											</ul>
+										</div>
+									</div>
+									<div class="col1">
+										<div class="h_nav">
+											<h4>Accessoires et modes</h4>
+											<ul>
+												<ui:repeat value="#{shopBean.shops2}" var="s">
+													<li><h:form>
+															<h:commandLink action="#{imageBean.redirect()}"
+																value="#{s.nameShop}">
+																<f:param name="id" value="#{s.id_account}" />
+																<f:param name="nameShop" value="#{s.nameShop}" />
+																<f:param name="phone" value="#{s.phone}" />
+																<f:param name="website" value="#{s.website}" />
+																<f:param name="description" value="#{s.description}" />
+															</h:commandLink>
+															
+															
+														</h:form></li>
+												</ui:repeat>
+											</ul>
+										</div>
+									</div>
+									<div class="col1">
+										<div class="h_nav">
+											<h4>Maison</h4>
+											<ul>
+												<ui:repeat value="#{shopBean.shops3}" var="s">
+													<li><h:form>
+															<h:commandLink action="#{imageBean.redirect()}"
+																value="#{s.nameShop}">
+																<f:param name="id" value="#{s.id_account}" />
+																<f:param name="nameShop" value="#{s.nameShop}" />
+																<f:param name="phone" value="#{s.phone}" />
+																<f:param name="website" value="#{s.website}" />
+																<f:param name="description" value="#{s.description}" />
+															</h:commandLink>
+															
+															
+														</h:form></li>
+												</ui:repeat>
+											</ul>
+										</div>
+									</div>
+									<div class="col1">
+										<div class="h_nav">
+											<h4>Art et culture</h4>
+											<ul>
+												<ui:repeat value="#{shopBean.shops4}" var="s">
+													<li><h:form>
+															<h:commandLink action="#{imageBean.redirect()}"
+																value="#{s.nameShop}">
+																<f:param name="id" value="#{s.id_account}" />
+																<f:param name="nameShop" value="#{s.nameShop}" />
+																<f:param name="phone" value="#{s.phone}" />
+																<f:param name="website" value="#{s.website}" />
+																<f:param name="description" value="#{s.description}" />
+															</h:commandLink>
+															
+															
+														</h:form></li>
+												</ui:repeat>
+											</ul>
+										</div>
+									</div>
+									<div class="col1">
+										<div class="h_nav">
+											<h4>Services et technologies</h4>
+											<ul>
+												<ui:repeat value="#{shopBean.shops5}" var="s">
+													<li><h:form>
+															<h:commandLink action="#{imageBean.redirect()}"
+																value="#{s.nameShop}">
+																<f:param name="id" value="#{s.id_account}" />
+																<f:param name="nameShop" value="#{s.nameShop}" />
+																<f:param name="phone" value="#{s.phone}" />
+																<f:param name="website" value="#{s.website}" />
+																<f:param name="description" value="#{s.description}" />
+															</h:commandLink>
+															
+															
+														</h:form></li>
+												</ui:repeat>
+											</ul>
+										</div>
+									</div>
+									<div class="col1">
+										<div class="h_nav">
+											<h4>Restauration</h4>
+											<ul>
+												<ui:repeat value="#{shopBean.shops6}" var="s">
+													<li><h:form>
+															<h:commandLink action="#{imageBean.redirect()}"
+																value="#{s.nameShop}">
+																<f:param name="id" value="#{s.id_account}" />
+																<f:param name="nameShop" value="#{s.nameShop}" />
+																<f:param name="phone" value="#{s.phone}" />
+																<f:param name="website" value="#{s.website}" />
+																<f:param name="description" value="#{s.description}" />
+															</h:commandLink>
+															
+															
+														</h:form></li>
+												</ui:repeat>
+											</ul>
+										</div>
+									</div>
+									<!-- 											<div class="col1 col5"> -->
+									<!-- 												<iframe -->
+									<!-- 													src="https://player.vimeo.com/video/10777111?color=ffffff&amp;title=0&amp;byline=0&amp;portrait=0" -->
+									<!-- 													webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe> -->
+									<!-- 											</div> -->
+
+								</div>
+
+							</div></li>
+							<li><a href="NewsList.jsf">Latest News</a></li>
+						
+						
+						<li><a href="statistics.jsf">Statistics</a></li>
+						<li><a href="chatroom.jsf">Chat Room</a></li>
+					</ul>
+					<!---->
+					<div class="search-in">
+						<div class="search">
+							<form>
+								<input type="text" value="Keywords" onfocus="this.value = '';"
+									onblur="if (this.value == '') {this.value = 'Keywords';}"
+									class="text" /> <input type="submit" value="SEARCH" />
+							</form>
+							<div class="close-in">
+								<h:graphicImage library="images" name="close.png" />
+							</div>
+						</div>
+						<div class="right">
+							<button></button>
+						</div>
+					</div>
+					<script type="text/javascript">
+							$('.search').hide();
+							$('button').click(function (){
+							$('.search').show();
+							$('.text').focus();
+							}
+							);
+							$('.close-in').click(function(){
+							$('.search').hide();
+							});
+						</script>
+
+					<!---->
+					<div class="cart box_1">
+						<a href="checkoutt.jsf">
+							<h3>
+								
+										<div class="total"> 
+<!-- 											(<span -->
+<!-- 												id="simpleCart_quantity" class="simpleCart_quantity"></span> -->
+<!-- 											items) -->
+											 <h:outputText value="#{cartBean.docount()}" /> 
+											items
+										</div>
+								
+								<h:graphicImage library="images" name="cart.png" />
+							</h3>
+						</a>
+						<p>
+							<a href="javascript:;" class="simpleCart_empty"></a>
+						</p>
+						<div class="clearfix"></div>
+					</div>
+
+					<div class="clearfix"></div>
+					<!---->
+				</div>
+
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+
+</ui:composition>

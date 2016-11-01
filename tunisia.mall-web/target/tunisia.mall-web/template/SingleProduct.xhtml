@@ -1,0 +1,369 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+      
+      <h:head>
+     
+<title>Amberegul A Ecommerce Category Flat Bootstrap Responsive Website Template | Single :: w3layouts</title>
+
+<h:outputStylesheet library="css" name="bootstrap.css"></h:outputStylesheet>
+<!-- <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" /> -->
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<h:outputScript library="js" name="jquery.min.js"></h:outputScript>
+<!-- <script src="js/jquery.min.js"></script> -->
+<!-- Custom Theme files -->
+<!--theme-style-->
+
+<h:outputStylesheet library="css" name="style.css"></h:outputStylesheet>
+<!--//theme-style-->
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Amberegul Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--fonts-->
+<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:300,700,400' rel='stylesheet' type='text/css'/>
+<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'/>
+<!--//fonts-->
+<!-- start menu -->
+<h:outputStylesheet library="css" name="megamenu.css"></h:outputStylesheet>
+<!-- <link href="css/megamenu.css" rel="stylesheet" type="text/css" media="all" /> -->
+<h:outputScript library="js" name="megamenu.js"></h:outputScript>
+<!-- <script type="text/javascript" src="js/megamenu.js"></script> -->
+<script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
+<!--//slider-script-->
+<h:outputScript library="js" name="main.js"></h:outputScript>
+<!-- <script src="js/main.js"></script> Resource jQuery -->
+<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  	})(window,document,'script','../../../../www.google-analytics.com/analytics.js','ga');
+
+  	ga('create', 'UA-48014931-1', 'codyhouse.co');
+  	ga('send', 'pageview');
+
+  	jQuery(document).ready(function($){
+  		$('.close-carbon-adv').on('click', function(){
+  			$('#carbonads-container').hide();
+  		});
+  	});
+</script>	
+<h:outputScript library="js" name="simpleCart.min.js"></h:outputScript>
+<!-- <script src="js/simpleCart.min.js"> </script> -->
+</h:head>
+<h:body>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../../../www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-30027142-1', 'w3layouts.com');
+  ga('send', 'pageview');
+</script>
+<!-- EOOOOOOOOO -->
+<script async="" type='text/javascript' src='../../../../cdn.fancybar.net/ac/fancybar6a2f.js?zoneid=1502&amp;serve=C6ADVKE&amp;placement=w3layouts' id='_fancybar_js'></script>
+
+ 
+<!--header-->	
+ <ui:include src="/template/HeaderConnected.xhtml" />
+<!---->
+<div class="container">
+	<h6 class="dress"><a href="index.html">Home</a> <i> </i> <h:outputText value="#{itemBean.l.get(0).name}" /> </h6>
+</div>
+
+		<!---->
+    <div class="product">
+		<div class="product">
+			<div class="container">
+
+				<!---->
+				<div class="col-md-9 product-price1">
+				<div class="col-md-5 single-top">	
+						<div class="flexslider">
+							        <!-- FlexSlider -->
+							        <h:outputScript library="js" name="imagezoom.js"></h:outputScript>
+<!-- 										<script src="js/imagezoom.js"></script> -->
+                                    <h:outputScript library="js" name="jquery.flexslider.js"></h:outputScript>
+<!-- 										  <script defer src="js/jquery.flexslider.js"></script> -->
+<h:outputStylesheet library="css" name="flexslider.css"></h:outputStylesheet>
+<!-- 										<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" /> -->
+
+										<script>
+										// Can also be used with $(document).ready()
+										$(window).load(function() {
+										  $('.flexslider').flexslider({
+											animation: "slide",
+											controlNav: "thumbnails"
+										  });
+										});
+										</script>
+									<!-- //FlexSlider-->
+								
+								
+							  <ul class="slides">
+							  <p:graphicImage
+												value="#{itemBean.myImage}" >
+												<f:param name="id" value="#{itemBean.l.get(0).id}"  />
+											</p:graphicImage>
+							 
+
+							  </ul>
+							<div class="clearfix"></div>
+						</div>
+
+					</div>	
+					<div class="col-md-7 single-top-in simpleCart_shelfItem">
+						<div class="single-para ">
+						<h4><h:outputText value="#{itemBean.l.get(0).name}" />    </h4>
+							<div class="star-on">
+								<ul class="star-footer">
+								<ui:include src="/template/Rating.xhtml" />
+																		</ul>
+								
+							<div class="clearfix"> </div>
+							</div>
+							
+							<h5 class="item_price">$ <h:outputText value="#{itemBean.l.get(0).price}" /></h5>
+							<p> <h:outputText value="#{itemBean.l.get(0).description}" />    </p>
+							<div class="available">
+								<ul>
+									<li>Color
+										<select>
+										<ui:repeat var="it" value="#{itemBean.l}">
+										<option><h:outputText value="#{it.color}" /></option>
+										</ui:repeat>
+									</select></li>
+								<li class="size-in">Size<select>
+								<ui:repeat var="st" value="#{itemBean.stocks}">
+										<option><h:outputText value="#{st.size}" /></option>
+										</ui:repeat>
+									
+								</select></li>
+								<div class="clearfix"> </div>
+							</ul>
+						</div>
+								<h:form > 
+								 <h:commandLink class="add-cart item_add"  value="ADD TO CART" action="#{cartBean.doSave()}">
+									<f:param value="#{itemBean.l.get(0).id}" name="idI"></f:param>
+									<f:param value="20" name="idC"></f:param>
+									
+								</h:commandLink> 
+								
+								</h:form>
+							
+						</div>
+					</div>
+
+				<div class="clearfix"> </div>
+			<!---->
+			
+<div style="text-align: center;">
+<script async="" src="../../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-9153409599391170"
+     data-ad-slot="6850850687"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+					<div class="cd-tabs">
+			<nav>
+				<ul class="cd-tabs-navigation">
+					<li><a data-content="fashion"  href="#0">Description </a></li>
+					<li><a data-content="cinema" href="#0" class="selected" >Addtional Information</a></li>
+				
+					
+				</ul> 
+			</nav>
+	<ul class="cd-tabs-content">
+		<li data-content="fashion" >
+		<div class="facts">
+									  <p ><h:outputText value="#{itemBean.l.get(0).description}" /></p>
+										
+											         
+							        </div>
+
+</li>
+<li data-content="cinema" class="selected" >
+		<div class="facts1">
+					
+						<div class="color"><p>Color</p>
+							<span ><ui:repeat var="it" value="#{itemBean.l}">
+										<h:outputText value="#{it.color}" />,
+										</ui:repeat></span>
+							<div class="clearfix"></div>
+						</div>
+						<div class="color">
+							<p>Size</p>
+							<span ><ui:repeat var="st" value="#{itemBean.stocks}">
+										<h:outputText value="#{st.size}" />,
+										</ui:repeat></span>
+							<div class="clearfix"></div>
+						</div>
+					        
+			 </div>
+
+
+<div class="clearfix"></div>
+</li>
+	</ul> 
+</div> 
+			<!---->
+		          <!-- -728x90- -->
+<div style="text-align: center;">
+<script async="" src="../../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-9153409599391170"
+     data-ad-slot="6850850687"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+<!-- 		        	<div class="top-product"> -->
+<!-- 					<h3 class="real">RELATED PRODUCTS</h3> -->
+		        	
+<!-- 		        		<div class="col-md-4 chain-grid  simpleCart_shelfItem"> -->
+<!-- 		        			<div class="grid-span-1"> -->
+<!-- 	   		     		<a  href="single.html"><img class="img-responsive " src="images/pr.jpg" alt=" "/> -->
+<!-- 	   		     			<div class="link"> -->
+<!-- 	   		     			<ul > -->
+<!-- 										<li><i> </i></li> -->
+<!-- 										<li><i class="white1"> </i></li> -->
+										
+<!-- 							</ul> -->
+<!-- 	   		     		</div> -->
+<!-- 	   		     		</a> -->
+<!-- 	   		     	</div> -->
+<!-- 	   		     		<div class="grid-chain-bottom "> -->
+<!-- 	   		     			<h6><a href="single.html">WOO JACKET #1</a></h6> -->
+<!-- 	   		     			<div class="star-price"> -->
+<!-- 	   		     				<div class="price-at"> -->
+<!-- 		   		     				<ul class="star-footer"> -->
+<!-- 										<li><a href="#"><i> </i></a></li> -->
+<!-- 										<li><a href="#"><i> </i></a></li> -->
+<!-- 										<li><a href="#"><i> </i></a></li> -->
+<!-- 										<li><a href="#"><i> </i></a></li> -->
+<!-- 										<li><a href="#"><i> </i></a></li> -->
+<!-- 									</ul> -->
+<!-- 									</div> -->
+<!-- 									<div class="price-at-bottom "> -->
+<!-- 										<span class="item_price">$ 75.00</span> -->
+<!-- 									</div> -->
+<!-- 	   		     				<div class="clearfix"> </div> -->
+<!-- 							</div> -->
+<!-- 							<div class="cart-add"> -->
+<!-- 								<a class="add1 item_add" href="#">ADD TO CART <i> </i></a> -->
+<!-- 								<a class="add2" href="#"><i> </i></a> -->
+<!-- 								<div class="clearfix"> </div> -->
+<!-- 							</div> -->
+<!-- 	   		     		</div> -->
+	   		     		
+<!-- 	   		     	</div> -->
+<!-- 	   		     	<div class="col-md-4 chain-grid simpleCart_shelfItem"> -->
+<!-- 					<div class="grid-span-1"> -->
+<!-- 	   		     		<a href="single.html"><img class="img-responsive " src="images/pr1.jpg" alt=" "/> -->
+<!-- 						<div class="link"> -->
+<!-- 	   		     			<ul > -->
+<!-- 										<li><i> </i></li> -->
+<!-- 										<li><i class="white1"> </i></li> -->
+										
+<!-- 							</ul> -->
+<!-- 	   		     		</div></a> -->
+<!-- 	   		     		</div> -->
+<!-- 	   		     		<div class="grid-chain-bottom "> -->
+<!-- 	   		     			<h6><a href="single.html">WOO JACKET #1</a></h6> -->
+<!-- 	   		     			<div class="star-price"> -->
+<!-- 	   		     				<div class="price-at"> -->
+<!-- 		   		     				<ul class="star-footer"> -->
+<!-- 										<li><a href="#"><i> </i></a></li> -->
+<!-- 										<li><a href="#"><i> </i></a></li> -->
+<!-- 										<li><a href="#"><i> </i></a></li> -->
+<!-- 										<li><a href="#"><i> </i></a></li> -->
+<!-- 										<li><a href="#"><i> </i></a></li> -->
+<!-- 									</ul> -->
+<!-- 									</div> -->
+<!-- 									<div class="price-at-bottom "> -->
+<!-- 										<span class="item_price">$ 75.00</span> -->
+<!-- 									</div> -->
+<!-- 	   		     				<div class="clearfix"> </div> -->
+<!-- 							</div> -->
+<!-- 							<div class="cart-add"> -->
+<!-- 								<a class="add1 item_add" href="#">ADD TO CART <i> </i></a> -->
+<!-- 								<a class="add2" href="#"><i> </i></a> -->
+<!-- 								<div class="clearfix"> </div> -->
+<!-- 							</div> -->
+<!-- 	   		     		</div> -->
+<!-- 	   		     	</div> -->
+<!-- 	   		     	<div class="col-md-4 chain-grid simpleCart_shelfItem"> -->
+<!-- 					<div class="grid-span-1"> -->
+<!-- 	   		     		<a href="single.html"><img class="img-responsive " src="images/pr2.jpg" alt=" "/> -->
+<!-- 						<div class="link"> -->
+<!-- 	   		     			<ul > -->
+<!-- 										<li><i> </i></li> -->
+<!-- 										<li><i class="white1"> </i></li> -->
+										
+<!-- 							</ul> -->
+<!-- 	   		     		</div></a> -->
+<!-- 	   		     		</div> -->
+<!-- 	   		     		<div class="grid-chain-bottom "> -->
+<!-- 	   		     			<h6><a href="single.html">WOO JACKET #1</a></h6> -->
+<!-- 	   		     			<div class="star-price"> -->
+<!-- 	   		     				<div class="price-at"> -->
+<!-- 		   		     				<ul class="star-footer"> -->
+<!-- 										<li><a href="#"><i> </i></a></li> -->
+<!-- 										<li><a href="#"><i> </i></a></li> -->
+<!-- 										<li><a href="#"><i> </i></a></li> -->
+<!-- 										<li><a href="#"><i> </i></a></li> -->
+<!-- 										<li><a href="#"><i> </i></a></li> -->
+<!-- 									</ul> -->
+<!-- 									</div> -->
+<!-- 									<div class="price-at-bottom "> -->
+<!-- 										<span class="item_price">$ 75.00</span> -->
+<!-- 									</div> -->
+<!-- 	   		     				<div class="clearfix"> </div> -->
+<!-- 							</div> -->
+<!-- 							<div class="cart-add"> -->
+<!-- 								<a class="add1 item_add" href="#">ADD TO CART <i> </i></a> -->
+<!-- 								<a class="add2" href="#"><i> </i></a> -->
+<!-- 								<div class="clearfix"> </div> -->
+<!-- 							</div> -->
+<!-- 	   		     		</div> -->
+	   		     
+<!-- 		        	</div> -->
+<!-- 	   		     	<div class="clearfix"> </div> -->
+<!-- 		        	</div> -->
+		     
+		      
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+			<!---->
+			
+<!---->
+        <!-- -728x90- -->
+<div style="text-align: center;">
+<script async="" src="../../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-9153409599391170"
+     data-ad-slot="6850850687"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+
+<!---->
+
+<ui:include src="/template/footer.xhtml" />
+</div>
+</h:body>
+      
+      
+      
+      
+
+	</html>

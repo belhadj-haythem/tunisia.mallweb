@@ -1,0 +1,132 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+	<h:head></h:head>
+	<h:body  style="background-color: #583759;" >
+	
+	
+	
+	<h:form style="background-color: #fff; border: 1px solid transparent;border-radius: 30px; box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);margin-bottom: 30px;margin-left: 60px;margin-top:30px; margin-right: 60px;">
+	
+	
+	   
+          
+    
+    <h3 style="margin-left: 40px;">Have you previously visited The Tunisia Mall?</h3>
+    <p:selectManyCheckbox id="grid2" value="#{checkboxView.selectedCities2}" layout="responsive" columns="1"  style="margin-left: 60px">
+        <f:selectItems value="#{checkboxView.cities}" var="city" itemLabel="#{city}" itemValue="#{city}" />
+    </p:selectManyCheckbox>
+    
+    <h3  style="margin-left: 40px;">Are you interested in receiving any information on mall updates, events and promotions?</h3>
+    <p:selectManyCheckbox id="grid1" value="#{checkboxView.selectedCities3}" layout="responsive" columns="1"  style="margin-left: 60px">
+        <f:selectItems value="#{checkboxView.cities1}" var="ciity" itemLabel="#{city}" itemValue="#{city}" />
+    </p:selectManyCheckbox>
+    
+     <h3  style="margin-left: 40px;">Are you a Resident?</h3>
+    <p:selectManyCheckbox id="grid3" value="#{checkboxView.selectedCities4}" layout="responsive" columns="1"  style="margin-left: 60px">
+        <f:selectItems value="#{checkboxView.cities2}" var="city1" itemLabel="#{city}" itemValue="#{city}" />
+    </p:selectManyCheckbox>
+    
+     <h3  style="margin-left: 40px;">Are you interested in receiving any information on mall updates, events and promotions?</h3>
+    <p:selectManyCheckbox id="grid4" value="#{checkboxView.selectedCities5}" layout="responsive" columns="1"  style="margin-left: 60px">
+        <f:selectItems value="#{checkboxView.cities3}" var="city2" itemLabel="#{city}" itemValue="#{city}" />
+    </p:selectManyCheckbox>
+    
+    <h3  style="margin-left: 40px;">Have you previously visited The Tunisia Mall?</h3>
+    <p:selectManyCheckbox id="grid5" value="#{checkboxView.selectedCities6}" layout="responsive" columns="1"  style="margin-left: 60px">
+        <f:selectItems value="#{checkboxView.cities4}" var="city3" itemLabel="#{city}" itemValue="#{city}" />
+    </p:selectManyCheckbox>
+    
+     <h3  style="margin-left: 40px;">Would you like to be contacted by one of our team to attend to any of your inquiries? </h3>
+    <p:selectManyCheckbox id="grid6" value="#{checkboxView.selectedCities7}" layout="responsive" columns="1"  style="margin-left: 60px">
+        <f:selectItems value="#{checkboxView.cities5}" var="city4" itemLabel="#{city}" itemValue="#{city}" />
+    </p:selectManyCheckbox>
+    
+    
+    
+    
+ 
+    
+    
+    <p:commandButton value="Submit" update="display" oncomplete="PF('dlg').show()" icon="ui-icon-check"  style="margin-left: 400px" />
+ 	
+ 	<p:dialog header="Tunisia Mall " modal="true" showEffect="clip" widgetVar="dlg" resizable="false">
+        <p:outputPanel id="display">
+            
+            <p:dataList value="#{checkboxView.selectedCities2}" var="city">
+                <f:facet name="header">
+                    Have you previously visited The Tunisia Mall?
+                </f:facet>
+                #{city}
+            </p:dataList>
+           
+            <p:dataList value="#{checkboxView.selectedCities3}" var="city">
+                <f:facet name="header">
+                   Are you interested in receiving any information on mall updates, events and promotions?
+                </f:facet>
+                #{city}
+            </p:dataList>
+             <p:dataList value="#{checkboxView.selectedCities4}" var="city">
+                <f:facet name="header">
+                  Are you a Resident?
+                </f:facet>
+                #{city}
+            </p:dataList>
+             <p:dataList value="#{checkboxView.selectedCities5}" var="city">
+                <f:facet name="header">
+                  Are you interested in receiving any information on mall updates, events and promotions?
+                </f:facet>
+                #{city}
+            </p:dataList>
+           
+             <p:dataList value="#{checkboxView.selectedCities6}" var="city">
+                <f:facet name="header">
+                    Have you previously visited The Tunisia Mall?
+                </f:facet>
+                #{city}
+            </p:dataList>
+             <p:dataList value="#{checkboxView.selectedCities7}" var="city">
+                <f:facet name="header">
+                  Would you like to be contacted by one of our team to attend to any of your inquiries? 
+                </f:facet>
+                #{city}
+            </p:dataList>
+            
+            
+        </p:outputPanel>
+       
+        
+        
+        <p:dialog modal="true" widgetVar="statusDialog" header="Status" draggable="false" closable="false" resizable="false">
+    <p:graphicImage name="/demo/images/ajaxloadingbar.gif" />
+
+            
+            </p:dialog>
+ 
+<h:form>
+    <p:commandButton action="#{checkboxView.doPdf(checkboxView.selectedCities2,checkboxView.selectedCities3,checkboxView.selectedCities4,checkboxView.selectedCities5,checkboxView.selectedCities6,checkboxView.selectedCities7)}" value="Submit" ajax="false" icon="ui-icon-arrowthick-1-s">
+<!--         <p:fileDownload value="#{fileDownloadView.file}" /> -->
+    </p:commandButton>
+</h:form>
+ 
+<script type="text/javascript">
+function start() {
+    PF('statusDialog').show();
+}
+ 
+function stop() {
+    PF('statusDialog').hide();
+}
+</script>
+        
+    </p:dialog>
+   
+	</h:form>
+	
+	 
+	</h:body>
+
+	
+	</html>

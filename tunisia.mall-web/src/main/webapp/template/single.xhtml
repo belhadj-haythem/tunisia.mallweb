@@ -1,0 +1,235 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title>Amberegul A Ecommerce Category Flat Bootstrap Responsive
+		Website Template | Single :: w3layouts</title>
+
+	<h:outputStylesheet library="css" name="bootstrap.css"></h:outputStylesheet>
+	<!-- <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" /> -->
+
+	<h:outputScript library="js" name="jquery.min.js"></h:outputScript>
+	<!-- Custom Theme files -->
+	<!--theme-style-->
+
+	<h:outputStylesheet library="css" name="style.css"></h:outputStylesheet>
+
+	<!--//theme-style-->
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords"
+		content="Amberegul Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<!--fonts-->
+	<link
+		href='http://fonts.googleapis.com/css?family=Roboto+Slab:300,700,400'
+		rel='stylesheet' type='text/css' />
+	<link
+		href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900'
+		rel='stylesheet' type='text/css' />
+	<!--//fonts-->
+	<!-- start menu -->
+	<h:outputStylesheet library="css" name="megamenu.css"></h:outputStylesheet>
+	<!-- <link href="css/megamenu.css" rel="stylesheet" type="text/css" media="all" /> -->
+
+	<h:outputScript library="js" name="megamenu.js"></h:outputScript>
+	<!-- <script type="text/javascript" src="js/megamenu.js"></script> -->
+	<script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
+	<!--//slider-script-->
+	<h:outputScript library="js" name="main.js"></h:outputScript>
+	<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  	})(window,document,'script','../../../../www.google-analytics.com/analytics.js','ga');
+
+  	ga('create', 'UA-48014931-1', 'codyhouse.co');
+  	ga('send', 'pageview');
+
+  	jQuery(document).ready(function($){
+  		$('.close-carbon-adv').on('click', function(){
+  			$('#carbonads-container').hide();
+  		});
+  	});
+</script>
+	<h:outputScript library="js" name="simpleCart.min.js"></h:outputScript>
+</h:head>
+<body>
+
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../../../www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-30027142-1', 'w3layouts.com');
+  ga('send', 'pageview');
+</script>
+	<script async="" type='text/javascript'
+		src='../../../../cdn.fancybar.net/ac/fancybar6a2f.js?zoneid=1502&amp;serve=C6ADVKE&amp;placement=w3layouts'
+		id='_fancybar_js'></script>
+
+
+	<!--header-->
+	<ui:include src="/template/HeaderConnected.xhtml" />
+	<!---->
+	<div class="container">
+		<h6 class="dress">
+			<a href="index.html">Home</a> <i> </i>
+			<h:outputFormat value="{0}">
+				<f:param value="#{newsBean.title}" />
+			</h:outputFormat>
+		</h6>
+	</div>
+	<div class="back">
+		<h2>
+			<h:outputFormat value="{0}">
+				<f:param value="#{newsBean.title}" />
+			</h:outputFormat>
+		</h2>
+	</div>
+	<!---->
+	<div class="product">
+		<div class="product">
+			<div class="container">
+
+				<!---->
+				<div class="col-md-9 product-price1">
+					<div class="col-md-5 single-top">
+						<div class="flexslider">
+							<!-- FlexSlider -->
+
+							<p:graphicImage value="#{newsBean.myImage}" width="320"
+								height="400">
+								<f:param name="id" value="#{newsBean.id}" />
+							</p:graphicImage>
+
+
+							<h:outputScript library="js" name="imagezoom.js"></h:outputScript>
+							<h:outputScript library="js" name="jquery.flexslider.js"></h:outputScript>
+							<!-- 							<script defer src="js/jquery.flexslider.js"></script> -->
+							<h:outputStylesheet library="css" name="flexslider.css"></h:outputStylesheet>
+
+							<!-- 							<link rel="stylesheet" href="css/flexslider.css" type="text/css" -->
+							<!-- 								media="screen" /> -->
+
+							<script>
+										// Can also be used with $(document).ready()
+										$(window).load(function() {
+										  $('.flexslider').flexslider({
+											animation: "slide",
+											controlNav: "thumbnails"
+										  });
+										});
+										</script>
+							<!-- //FlexSlider -->
+
+
+							<div class="clearfix"></div>
+						</div>
+
+					</div>
+					<div class="col-md-7 single-top-in simpleCart_shelfItem">
+						<div class="single-para ">
+
+							<h4>
+								<h:outputFormat value="News : {0}">
+									<f:param value="#{newsBean.title}" />
+								</h:outputFormat>
+							</h4>
+
+
+							<h5 class="item_price"></h5>
+							<p>
+								<h:outputFormat value="subject : {0}">
+									<f:param value="#{newsBean.subject}" />
+								</h:outputFormat>
+								  </p>
+								<p>
+								<h:outputFormat value="Start Date  : {0}">
+									<f:param value="#{newsBean.datedebut}" />
+								</h:outputFormat>
+							</p>
+
+
+
+
+						</div>
+					</div>
+
+					<div class="clearfix"></div>
+					<!-- -->
+					<!-- -728x90- -->
+					<div style="text-align: center;">
+						<script async=""
+							src="../../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+						<ins class="adsbygoogle"
+							style="display: inline-block; width: 728px; height: 90px"
+							data-ad-client="ca-pub-9153409599391170"
+							data-ad-slot="6850850687"></ins>
+						<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+					</div>
+
+					<!---->
+					<!-- -728x90- -->
+					<div style="text-align: center;">
+						<script async=""
+							src="../../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+						<ins class="adsbygoogle"
+							style="display: inline-block; width: 728px; height: 90px"
+							data-ad-client="ca-pub-9153409599391170"
+							data-ad-slot="6850850687"></ins>
+						<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+					</div>
+
+
+
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+		<!---->
+		<div class="bottom-grid1">
+
+			<div class="fit1">
+				<h3>HAPPY SHOPPING</h3>
+				<p>
+					<h:outputFormat value="{0}">
+						<f:param value="#{newsBean.title}" />
+						
+					</h:outputFormat>
+				</p>
+			</div>
+		</div>
+		<a href="NewsList.jsf" class="sed" style=" background: #ff5d56;
+  border: 2px solid #ff5d56;
+  color:#fff;">Show all </a>
+		<!---->
+		<!-- -728x90- -->
+		<div style="text-align: center;">
+			<script async=""
+				src="../../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+			<ins class="adsbygoogle"
+				style="display: inline-block; width: 728px; height: 90px"
+				data-ad-client="ca-pub-9153409599391170" data-ad-slot="6850850687"></ins>
+			<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+		</div>
+		
+		<ui:include src="/template/footer.xhtml" />
+	</div>
+	<!---->
+</body>
+
+<!-- Mirrored from p.w3layouts.com/demos/amberegul/web/single.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Apr 2016 22:50:18 GMT -->
+</html>

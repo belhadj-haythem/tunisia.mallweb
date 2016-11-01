@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+	<title>Tunisia Mall ::Account</title>
+	<h:outputStylesheet library="css" name="bootstrap.css"></h:outputStylesheet>
+	<h:outputScript library="js" name="jquery.min.js"></h:outputScript>
+	<h:outputStylesheet library="css" name="style.css"></h:outputStylesheet>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords"
+		content="Amberegul Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<!--fonts-->
+	<link
+		href='http://fonts.googleapis.com/css?family=Roboto+Slab:300,700,400'
+		rel='stylesheet' type='text/css' />
+	<link
+		href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900'
+		rel='stylesheet' type='text/css' />
+	<h:outputStylesheet library="css" name="megamenu.css"></h:outputStylesheet>
+	<h:outputScript library="js" name="megamenu.js"></h:outputScript>
+	<script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
+	<h:outputScript library="js" name="simpleCart.min.js"></h:outputScript>
+	<script type="text/javascript">
+</script>
+</h:head>
+<h:body>
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../../../www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-30027142-1', 'w3layouts.com');
+  ga('send', 'pageview');
+</script>
+	<script async="async" type='text/javascript'
+		src='../../../../cdn.fancybar.net/ac/fancybar6a2f.js?zoneid=1502&amp;serve=C6ADVKE&amp;placement=w3layouts'
+		id='_fancybar_js'></script>
+	<!--header-->
+	<ui:include src="/template/HeaderConnected.xhtml" />
+	<!-- -->
+	<div class="container">
+		<h6 class="dress">
+			<a href="index.html">Home</a> <i> </i> Account
+		</h6>
+	</div>
+	<!-- -728x90- -->
+	<div style="text-align: center;">
+		<script async=""
+			src="../../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+		<ins class="adsbygoogle"
+			style="display: inline-block; width: 728px; height: 90px"
+			data-ad-client="ca-pub-9153409599391170" data-ad-slot="6850850687"></ins>
+		<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+	</div>
+	<div class="back">
+		<h2>ACCOUNT</h2>
+	</div>
+	<!-- -728x90- -->
+	<div style="text-align: center;">
+		<script async=""
+			src="../../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+		<ins class="adsbygoogle"
+			style="display: inline-block; width: 728px; height: 90px"
+			data-ad-client="ca-pub-9153409599391170" data-ad-slot="6850850687"></ins>
+		<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+	</div>
+	<!-- -->
+	<div class="container">
+		<div class="account_grid">
+			<div class=" login-right">
+				<h3>REGISTERED CUSTOMERS</h3>
+				<p>If you have an account with us, please log in.</p>
+				<h:form name="maForm">
+					<div>
+						<span><h:outputLabel value="First Name" /></span>
+						<h:inputText name="fname" disabled="false"
+							style="text-align:center; border-left: none; border-right: none;background-color: #FFFFFF;"
+							value="#{loginBean.customer.fisrt_name}">
+							<f:ajax execute="@this" event="blur" />
+						</h:inputText>
+					</div>
+					<div>
+						<span><h:outputLabel value="Last Name" /></span>
+						<h:inputText name="lastname" disabled="false"
+							style="text-align:center;border-left: none; border-right: none;background-color: #FFFFFF;"
+							value="#{loginBean.customer.last_name}">
+							<f:ajax execute="@this" event="blur" />
+						</h:inputText>
+					</div>
+					<div>
+						<span><h:outputLabel value="Email Address" /></span>
+						<h:inputText name="emailaddress" disabled="false"
+							style="text-align:center;border-left: none; border-right: none;background-color: #FFFFFF;"
+							value="#{loginBean.customer.email}">
+							<f:ajax execute="@this" event="blur" />
+						</h:inputText>
+					</div>
+					<div>
+						<span><h:outputLabel value="Username" /></span>
+						<h:inputText name="username" disabled="false"
+							style="text-align:center;border-left: none; border-right: none;background-color: #FFFFFF;"
+							value="#{loginBean.customer.username}">
+							<f:ajax execute="@this" event="blur" />
+						</h:inputText>
+					</div>
+					<div>
+						<span><h:outputLabel value="Password" /></span>
+
+						<h:inputText name="pwd" disabled="false"
+							style="text-align:center;border-left: none; border-right: none;background-color: #FFFFFF;"
+							value="#{loginBean.customer.password}">
+							<f:ajax execute="@this" event="blur" />
+						</h:inputText>
+					</div>
+					<div>
+						<span><h:outputLabel value="Adress" /></span>
+						<h:inputText name="address" disabled="false"
+							style="text-align:center;border-left: none; border-right: none;background-color: #FFFFFF;"
+							value="#{loginBean.customer.adress}">
+							<f:ajax execute="@this" event="blur" />
+						</h:inputText>
+					</div>
+					<div>
+						<span><h:outputLabel value="Phone" /></span>
+						<h:inputText name="phone" disabled="false"
+							style="text-align:center;border-left: none; border-right: none;background-color: #FFFFFF;"
+							value="#{loginBean.customer.phone}"
+							onkeypress="if(event.which &lt; 48 || event.which &gt; 57 ) if(event.which != 8) return false;"
+							maxlength="8">
+							<f:ajax execute="@this" event="blur" />
+						</h:inputText>
+					</div>
+					<div>
+						<span><h:outputLabel value="Card Number" /></span>
+						<h:inputText name="cardnumber" disabled="false"
+							style="text-align:center;border-left: none; border-right: none;background-color: #FFFFFF;"
+							value="#{loginBean.customer.card_number}"
+							onkeypress="if(event.which &lt; 48 || event.which &gt; 57 ) if(event.which != 8) return false;"
+							maxlength="16">
+							<f:ajax execute="@this" event="blur" />
+						</h:inputText>
+					</div>
+					<div>
+						<h:column>  
+							<h:commandButton name="save" 
+								actionListener="#{loginBean.doUpdateCustomer()}" value="Save" />
+						</h:column>
+					</div>
+				</h:form>
+			</div>
+		</div>
+	</div>
+	<!-- -->
+	<!-- -728x90- -->
+	<div style="text-align: center;">
+		<script async=""
+			src="../../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+		<ins class="adsbygoogle"
+			style="display: inline-block; width: 728px; height: 90px"
+			data-ad-client="ca-pub-9153409599391170" data-ad-slot="6850850687"></ins>
+		<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+	</div>
+	<div class="bottom-grid1">
+		<div class="fit1">
+			<h3>HAPPY SHOPPING</h3>
+			<p>Lorem Ipsum sit amet consectuer adipiscing elit sed diam
+				nonummy nibh euismod</p>
+		</div>
+	</div>
+	<!-- -->
+	<ui:include src="/template/footer.xhtml" />
+	<!-- -->
+</h:body>
+</html>

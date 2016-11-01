@@ -1,0 +1,43 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+<meta charset="utf-8"/>
+<title>html demo</title>
+<style>
+p {
+	margin: 8px;
+	font-size: 20px;
+	color: blue;
+	cursor: pointer;
+}
+
+b {
+	text-decoration: underline;
+}
+
+button {
+	cursor: pointer;
+}
+</style>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</h:head>
+<h:body>
+
+	<p>
+		This
+		<h:commandButton id="ha" value="mon bouton" />
+		does nothing.
+	</p>
+	<div id="haythem">aaaa</div>
+	<script>
+$( "#ha" ).click(function() {
+  var str = document.getElementById("haythem");
+  $(str).set("aaddaaaffaa");
+});
+</script>
+
+</h:body>
+</html>

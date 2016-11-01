@@ -1,0 +1,75 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+<head>
+
+<h:outputStylesheet library="css" name="bootstrap.css"></h:outputStylesheet>
+	<!-- <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" /> -->
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<h:outputScript library="js" name="jquery.min.js"></h:outputScript>
+	<!-- <script src="js/jquery.min.js"></script> -->
+	<!-- Custom Theme files -->
+	<!--theme-style-->
+
+	<h:outputStylesheet library="css" name="style.css"></h:outputStylesheet>
+	<!-- <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />	 -->
+	<!--//theme-style-->
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords"
+		content="Amberegul Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<!--fonts-->
+	<link
+		href='http://fonts.googleapis.com/css?family=Roboto+Slab:300,700,400'
+		rel='stylesheet' type='text/css' />
+	<link
+		href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900'
+		rel='stylesheet' type='text/css' />
+	<!--//fonts-->
+	<!-- start menu -->
+
+	<h:outputStylesheet library="css" name="megamenu.css"></h:outputStylesheet>
+	<!-- <link href="css/megamenu.css" rel="stylesheet" type="text/css" media="all" /> -->
+
+	<h:outputScript library="js" name="megamenu.js"></h:outputScript>
+	<!-- <script type="text/javascript" src="js/megamenu.js"></script> -->
+
+	<script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
+</head>
+
+	<h:body>
+	
+	<ui:include src="/template/HeaderConnected.xhtml" />
+<center>
+  <h:outputText value="&lt;br/&gt;" escape="false" />
+  <h:outputText value="&lt;br/&gt;" escape="false" />
+
+<h1 style="color: #8C001A">Statistic Result</h1>
+  <h:outputText value="&lt;br/&gt;" escape="false" />
+  <h:outputText value="&lt;br/&gt;" escape="false" />
+
+</center>
+	<h3 style="color: #808080; margin-left:30px; margin-bottom:20px;"> Question1 : Have you previously visited The Tunisia Mall?</h3>
+	<h3 style="color: #808080; margin-left:30px; margin-bottom:20px;"> Question2 : Are you interested in receiving any information on mall updates, events and promotions? </h3>
+	<h3 style="color: #808080; margin-left:30px; margin-bottom:20px;"> Question3 : Are you a Resident?</h3>
+	<h3 style="color: #808080; margin-left:30px; margin-bottom:20px;"> Question4 : Are you interested in receiving any information on mall updates, events and promotions?</h3>
+	<h3 style="color: #808080; margin-left:30px; margin-bottom:20px;"> Question5 : Have you previously visited The Tunisia Mall?</h3>
+	<h:form>
+	<h:panelGrid columns="2" columnClasses="left,right" style="width:600px;margin-left:300px;">
+   
+    <p:chart type="bar" model="#{chartView.animatedModel2}" style="width:800px;" />
+      <h:outputText value="&lt;br/&gt;" escape="false" />
+      <h:outputText value="&lt;br/&gt;" escape="false" />
+    
+     </h:panelGrid>
+	</h:form>
+	
+
+	<ui:include src="/template/footer.xhtml" />
+	
+	</h:body>
+</ui:composition>

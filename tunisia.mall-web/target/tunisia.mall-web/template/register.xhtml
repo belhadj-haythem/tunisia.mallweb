@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title>Amberegul A Ecommerce Category Flat Bootstrap Responsive
+		Website Template | Register :: w3layouts</title>
+	<h:outputStylesheet library="css" name="bootstrap.css"></h:outputStylesheet>
+	<h:outputScript library="js" name="jquery.min.js"></h:outputScript>
+	<h:outputStylesheet library="css" name="style.css"></h:outputStylesheet>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords"
+		content="Amberegul Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<!--fonts-->
+	<link
+		href='http://fonts.googleapis.com/css?family=Roboto+Slab:300,700,400'
+		rel='stylesheet' type='text/css' />
+	<link
+		href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900'
+		rel='stylesheet' type='text/css' />
+	<!--//fonts-->
+	<!-- start menu -->
+	<h:outputStylesheet library="css" name="megamenu.css"></h:outputStylesheet>
+	<h:outputScript library="js" name="megamenu.js"></h:outputScript>
+	<script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
+	<!--//slider-script-->
+	<h:outputScript library="js" name="simpleCart.min.js"></h:outputScript>
+</h:head>
+<h:body>
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../../../www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-30027142-1', 'w3layouts.com');
+  ga('send', 'pageview');
+</script>
+	<script async="" type='text/javascript'
+		src='../../../../cdn.fancybar.net/ac/fancybar6a2f.js?zoneid=1502&amp;serve=C6ADVKE&amp;placement=w3layouts'
+		id='_fancybar_js'></script>
+
+
+	<!--header-->
+	<ui:include src="/template/header.xhtml" />
+	<!-- -->
+	<div class="container">
+		<h6 class="dress">
+			<a href="catalogueOnline.xhtml">Home</a> <i> </i> Register
+		</h6>
+	</div>
+	<div class="back">
+		<h2>REGISTER</h2>
+	</div>
+	<!-- -->
+	<div class="container">
+		<!-- -728x90- -->
+		<div style="text-align: center;">
+			<script async=""
+				src="../../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+			<ins class="adsbygoogle"
+				style="display: inline-block; width: 728px; height: 90px"
+				data-ad-client="ca-pub-9153409599391170" data-ad-slot="6850850687"></ins>
+			<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+		</div>
+		<div class="register">
+			<h3>PERSONAL INFORMATION</h3>
+			<h:form>
+
+
+				<div class="mation">
+					<div>
+						<span><h:outputLabel value="First Name" /></span>
+						<h:inputText value="#{userBean.customer.fisrt_name}" />
+					</div>
+					<div>
+						<span><h:outputLabel value="Last Name" /></span>
+						<h:inputText value="#{userBean.customer.last_name}" />
+					</div>
+					<div>
+						<span><h:outputLabel value="Email Address" /></span>
+						<h:inputText value="#{userBean.customer.email}" />
+					</div>
+					<div>
+						<span><h:outputLabel value="Username" /></span>
+						<h:inputText value="#{userBean.customer.username}" />
+					</div>
+
+					<div>
+						<p:messages id="messages" showDetail="true" autoUpdate="true" />
+						<span><h:outputLabel for="pwd1" value="Password" /></span>
+						<p:password id="pwd1" value="#{userBean.customer.password}"
+							match="pwd2" label="Password 1" required="true" />
+						<!-- 						<span><h:outputLabel value="Password" /></span> -->
+						<!-- 						<h:inputSecret value="#{userBean.customer.password}" /> -->
+					</div>
+					<div>
+
+						<span><h:outputLabel for="pwd2" value="Confirm Password" /></span>
+						<p:password id="pwd2" value="#{userBean.customer.password}"
+							match="pwd2" label="Password 2" required="true" />
+						<!-- 						<span><h:outputLabel value="Confirm Password" /></span> -->
+						<!-- 						<h:inputSecret value="#{userBean.customer.password}" /> -->
+					</div>
+					<div>
+						<span><h:outputLabel value="Adress" /></span>
+						<h:inputText value="#{userBean.customer.adress}" />
+					</div>
+					<div>
+						<span><h:outputLabel value="Phone" /></span>
+						<h:inputText
+							onkeypress="if(event.which &lt; 48 || event.which &gt; 57 ) if(event.which != 8) return false;"
+							size="8" value="#{userBean.customer.phone}" />
+					</div>
+					<div>
+						<span><h:outputLabel value="Card Number" /></span>
+						<h:inputText
+							onkeypress="if(event.which &lt; 48 || event.which &gt; 57 ) if(event.which != 8) return false;"
+							maxlength="16" value="#{userBean.customer.card_number}" />
+					</div>
+				</div>
+				<h:commandButton action="#{userBean.doSaveCustomer()}"
+					value="Enregistrer" />
+			</h:form>
+
+
+		</div>
+		<!-- -728x90- -->
+		<div style="text-align: center;">
+			<script async=""
+				src="../../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+			<ins class="adsbygoogle"
+				style="display: inline-block; width: 728px; height: 90px"
+				data-ad-client="ca-pub-9153409599391170" data-ad-slot="6850850687"></ins>
+			<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+		</div>
+	</div>
+	<!-- -->
+	<div class="bottom-grid1">
+
+		<div class="fit1">
+			<h3>HAPPY SHOPPING</h3>
+			<p>Lorem Ipsum sit amet consectuer adipiscing elit sed diam
+				nonummy nibh euismod</p>
+		</div>
+	</div>
+	<!-- -->
+	<!-- -728x90- -->
+	<div style="text-align: center;">
+		<script async=""
+			src="../../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+		<ins class="adsbygoogle"
+			style="display: inline-block; width: 728px; height: 90px"
+			data-ad-client="ca-pub-9153409599391170" data-ad-slot="6850850687"></ins>
+		<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+	</div>
+	<ui:include src="/template/footer.xhtml" />
+	<!-- -->
+</h:body>
+
+<!-- Mirrored from p.w3layouts.com/demos/amberegul/web/register.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Apr 2016 22:50:18 GMT -->
+</html>

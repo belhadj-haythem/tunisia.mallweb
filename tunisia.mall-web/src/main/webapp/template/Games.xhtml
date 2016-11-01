@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title>Games</title>
+	<h:outputStylesheet library="css" name="bootstrap.css"></h:outputStylesheet>
+	<h:outputScript library="js" name="jquery.min.js"></h:outputScript>
+
+	<h:outputStylesheet library="css" name="style.css"></h:outputStylesheet>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords"
+		content="Amberegul Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+
+	<h:outputStylesheet library="css" name="megamenu.css"></h:outputStylesheet>
+
+	<h:outputScript library="js" name="megamenu.js"></h:outputScript>
+
+	<style>
+body{
+	text-align: center;
+	background: #349BC0;
+  font-family: sans-serif;
+  font-weight: 100;
+}
+
+table {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	margin: 10px 0;
+	width: 60%;
+	text-align: left;
+	border-collapse: collapse;
+}
+
+th {
+	font-size: 13px;
+	font-weight: normal;
+	padding: 8px;
+	background: #b9c9fe
+		url('http://4.bp.blogspot.com/_xDpoN6UfFFY/S-J2gjh1nPI/AAAAAAAACbg/7lNsVpks2oY/s1600/gradhead.png')
+		repeat-x;
+	border-top: 2px solid #d3ddff;
+	border-bottom: 1px solid #fff;
+	color: #039;
+}
+
+td {
+	padding: 8px;
+	border-bottom: 1px solid #fff;
+	color: #669;
+	border-top: 1px solid #fff;
+	background: #e8edff
+		url('http://1.bp.blogspot.com/_xDpoN6UfFFY/S-J2f5yBC3I/AAAAAAAACbY/zWXYXsR-w5E/s1600/gradback.png')
+		repeat-x;
+}
+
+#a {
+	color: #039;
+}
+</style>
+
+
+</h:head>
+<h:body>
+	<!--header-->
+	<ui:include src="/template/HeaderConnected.xhtml" />
+	<!---->
+
+
+	<h:form>
+
+
+		<div class="ui-grid">
+			<div class="ui-grid-row">
+				<div class="ui-grid-col-6">
+
+					<p:scrollPanel mode="native"
+						style="width:450px;height:500px;margin-left: 2cm;margin-top:0.3cm;margin-bottom:0.3cm">
+
+						<p:dataGrid var="car" value="#{gamesBean.maListe}" columns="1"
+							layout="grid">
+
+							<f:facet name="header">
+								<p style="font-weight: bold; color: red; font-size: 20px">Games</p>
+							</f:facet>
+
+							<p:panel><center>
+
+								<h:outputText value="Name game: "
+									style="font-weight: bold;color :red; font-size:20px" />
+								<h:outputText value="#{car.title}" />
+								<br></br>
+								<br></br>
+								<h:outputText value="Description: "
+									style="font-weight: bold;color :red; font-size:20px" />
+								<h:outputText value="#{car.description}" />
+								<br></br>
+								<br></br>
+								<br></br>
+								<h:commandButton value="Subscribe"
+									action="#{gamesBean.doSubscribe(car)}" />
+
+							</center>
+							</p:panel>
+						</p:dataGrid>
+					</p:scrollPanel>
+				</div>
+
+				<div class="ui-grid-col-6" style="background-color : #349BC0;">
+					<p:scrollPanel mode="native"
+						style="width:450px;height:500px;margin-left: 2cm;margin-top:0.3cm;margin-bottom:0.3cm">
+
+						<center>
+							<h:dataTable border="1" value="#{gamesBean.retourListGames()}"
+								var="evv" style="width:450px;height:500px;">
+								<link rel="stylesheet" href="{{asset('css/scroll.css')}}" />
+
+								<h:column>
+									<f:facet name="header">
+										<h:outputText value="Name game" />
+									</f:facet>
+									<h:outputText value="#{evv.title}" />
+								</h:column>
+
+								<h:column>
+									<f:facet name="header">
+										<h:outputText value="Description" />
+									</f:facet>
+									<h:outputText value="#{evv.description}" />
+								</h:column>
+
+							</h:dataTable>
+						</center>
+					</p:scrollPanel>
+				</div>
+			</div>
+		</div>
+	</h:form>
+
+	<!---->
+	<ui:include src="/template/footer.xhtml" />
+	<!---->
+</h:body>
+</html>

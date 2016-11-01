@@ -1,0 +1,102 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:body  style="background-color: #583759;" >
+
+
+<h:form style="background-color: #fff; border: 1px solid transparent;border-radius: 30px; box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);margin-bottom: 30px;margin-left: 60px;margin-top:30px; margin-right: 60px;">
+   
+ 
+   
+ 
+   
+           
+           <h3 style="margin-left: 30px;">How do you rate the following: </h3>
+    <h:panelGrid columns="2" style="margin-bottom:10px; margin-left: 20px" cellpadding="5">
+        <p:outputLabel for="city" value="How do you rate your overall website experience?" />
+        <p:selectOneRadio id="city" value="#{surveyBean.city}"  layout="grid" columns="3">
+            <f:selectItems value="#{surveyBean.cities}" var="c" itemLabel="#{city}" itemValue="#{city}"/>
+        </p:selectOneRadio>
+    </h:panelGrid>
+    
+     <h:panelGrid columns="2" style="margin-bottom:10px ; margin-left: 20px" cellpadding="5">
+        <p:outputLabel for="city" value="How do you rate the speed of navigation of the website?" />
+        <p:selectOneRadio id="ciity" value="#{surveyBean.city}"  layout="grid" columns="3">
+            <f:selectItems value="#{surveyBean.cities}" var="cc" itemLabel="#{city}" itemValue="#{city}"/>
+        </p:selectOneRadio>
+    </h:panelGrid>
+    
+     <h:panelGrid columns="2" style="margin-bottom:10px ; margin-left: 20px" cellpadding="5">
+        <p:outputLabel for="city" value="How do you rate the availability of information on the website?" />
+        <p:selectOneRadio id="ciiity" value="#{surveyBean.city}"  layout="grid" columns="3">
+            <f:selectItems value="#{surveyBean.cities}" var="ccc" itemLabel="#{city}" itemValue="#{city}"/>
+        </p:selectOneRadio>
+    </h:panelGrid>
+   
+     <h:panelGrid columns="2" style="margin-bottom:10px ;margin-left: 20px " cellpadding="5">
+        <p:outputLabel for="city" value="How do you rate the ease of usage of the website?" />
+        <p:selectOneRadio id="ciiiity" value="#{surveyBean.city}"  layout="grid" columns="3">
+            <f:selectItems value="#{surveyBean.cities}" var="cccc" itemLabel="#{city}" itemValue="#{city}"/>
+        </p:selectOneRadio>
+    </h:panelGrid>
+    
+    <h3 style="margin-left: 20px;">What other features would you like to see on the website?</h3>
+    <p:inputTextarea rows="5" cols="40" style="margin-left:60px"  counter="display" maxlength="30" counterTemplate="{0} characters remaining." autoResize="false" />
+    <h:outputText id="display" />
+    
+    
+    <h3 style="margin-left:30px;">Have you previously visited The Dubai Mall?</h3>
+  
+    <h:panelGrid columns="2" style="margin-bottom:10px" cellpadding="5">
+      
+        <p:selectOneRadio id="console" value="#{surveyBean.console}">
+            <f:selectItem itemLabel="yes" itemValue="yes" />
+            <f:selectItem itemLabel="no" itemValue="no" />
+        </p:selectOneRadio>
+    </h:panelGrid>
+    
+  <h3 style="margin-left: 30px;" >  What are your reasons for visiting the Dubai Mall? (Check all that apply)</h3>
+ 
+    
+    <p:selectManyCheckbox id="basic" value="#{checkboxView.selectedConsoles}">
+        <f:selectItem itemLabel="Shopping" itemValue="Shopping" />
+        <f:selectItem itemLabel="Leisure And Entertainment" itemValue="le" />
+        <f:selectItem itemLabel="Dining" itemValue="Dining" />
+        <f:selectItem itemLabel="Business Meeting" itemValue="b" />
+        <f:selectItem itemLabel="The tunisian Fountain" itemValue="t" />
+        <f:selectItem itemLabel="Promotions And Events" itemValue="p" />
+    </p:selectManyCheckbox>
+    
+    
+    
+   
+   
+       <p:commandButton value="Submit" update="display" oncomplete="PF('dlg').show()" icon="ui-icon-check" />
+ 
+    <p:dialog header="Values" modal="true" showEffect="clip" widgetVar="dlg" resizable="false">
+        <p:outputPanel id="display">
+            <p:dataList value="#{surveyBean.city}" var="console">
+                <f:facet name="header">
+                    Basic
+                </f:facet>
+                #{console}
+            </p:dataList>
+            <p:dataList value="#{surveyBean.city}" var="city">
+                <f:facet name="header">
+                    Grid
+                </f:facet>
+                #{city}
+            </p:dataList>
+           
+          
+        </p:outputPanel>
+    </p:dialog>
+    
+</h:form>
+	
+	
+	</h:body>
+	</html>
